@@ -1,10 +1,13 @@
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss'
 import Loader from 'react-loaders';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
+    const form = useRef()
 
     useEffect(() => {
         let timeout = setTimeout(() => {
@@ -15,6 +18,25 @@ const Contact = () => {
            clearTimeout(timeout);
          };
        }, []);
+
+    const sendEmail = (e) => {
+        e.preventDefault()
+
+        emailjs
+            .sendForm(
+                '{EMAILJS_SERVICE_ID}',
+                '{EMAILJS_TEMPLATE_ID',
+                form.current,
+                '{EMAILJS_PUB_KEY}'
+            )
+            .then(() => {
+                alert('Message Successfully sent!')
+                window.location.reload(false)
+            })
+            .catch(() => {
+                alert('Failed to send the message, please try again')
+            });
+    }
 
     return (
         <>
@@ -28,12 +50,12 @@ const Contact = () => {
                         />
                     </h1>
                     <p>
-                        I'm interested in freelance opportunities - especially ambitious or 
+                        I'm interested in various opportunities - especially ambitious or 
                         large projects. However, if you have other requests or questions, 
                         don't hesitate to contact me using below form either.
                     </p>
                     <div className='contact-form'>
-                        <form>
+                        <form ref={form} onSubmit={sendEmail}>
                             <ul>
                                 <li className='half'>
                                     <input type='text' name='name' placeholder='Name' required />
@@ -53,6 +75,21 @@ const Contact = () => {
                             </ul>
                         </form>
                     </div>
+                </div>
+                <div className='info-map'>
+                    George Petrovski,
+                    <br />
+                    Toronto, ON, Canada
+                    <br />
+                    <span>ge0403p@gmail.com</span>
+                </div>
+                <div className='map-wrap'>
+                    <MapContainer center={[43.653226, -79.383184]} zoom={13} >
+                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                        <Marker position={[43.653226, -79.383184]}>
+                            <Popup>George lives here, let's grab a cup of coffee and chat!</Popup>
+                        </Marker>
+                    </MapContainer>
                 </div>
             </div>
             <Loader type="pacman" />
