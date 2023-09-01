@@ -1,40 +1,40 @@
 import './index.scss';
 import LogoS from '../../../assets/images/logo-s.png'
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
+import { useRef } from 'react'
+// import gsap from 'gsap-trial'
+// import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
 
 const Logo = () => {
     const bgRef = useRef();
-    const outlineLogoRef = useRef();
+    // const outlineLogoRef = useRef();
     const solidLogoRef = useRef();
 
-    useEffect(() => {
-        gsap.registerPlugin(DrawSVGPlugin)
+    // useEffect(() => {
+    //     gsap.registerPlugin(DrawSVGPlugin)
     
-        gsap
-          .timeline()
-          .to(bgRef.current, {
-            duration: 1,
-            opacity: 1,
-          })
-          .from(outlineLogoRef.current, {
-            drawSVG: 0,
-            duration: 20,
-          })
+    //     gsap
+    //       .timeline()
+    //       .to(bgRef.current, {
+    //         duration: 1,
+    //         opacity: 1,
+    //       })
+    //       .from(outlineLogoRef.current, {
+    //         drawSVG: 0,
+    //         duration: 20,
+    //       })
     
-        gsap.fromTo(
-          solidLogoRef.current,
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            delay: 4,
-            duration: 4,
-          }
-        )
-      }, [])
+    //     gsap.fromTo(
+    //       solidLogoRef.current,
+    //       {
+    //         opacity: 0,
+    //       },
+    //       {
+    //         opacity: 1,
+    //         delay: 4,
+    //         duration: 4,
+    //       }
+    //     )
+    //   }, [])
 
     return (
         <div className='logo-container' ref={bgRef}>
@@ -44,7 +44,7 @@ const Logo = () => {
                 src= {LogoS} 
                 alt ='JavaScript, Developer' 
             />
-            <svg
+            {/* <svg
                 width='559pt'
                 height='897pt'
                 version='1.0'
@@ -61,7 +61,7 @@ const Logo = () => {
                10 10,40 Q10,70 45,70 Q70,70 75,50"
                     />
                 </g>
-            </svg>
+            </svg> */}
         </div>
     )
 }
