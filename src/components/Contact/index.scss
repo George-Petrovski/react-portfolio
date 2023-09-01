@@ -109,3 +109,37 @@
     animation-fill-mode: forwards;
 }
 
+@media screen and (max-width: 1200px) {
+    .info-map {
+        position: sticky;
+        float: right;
+        right: 0px;
+        bottom: -150px;
+        background-color: #000;
+        z-index: 999999;
+        width: 16.688rem;
+        padding: 1.25rem;
+        color: #fff;
+        font-family: 'Helvetica';
+        font-size: 1.063rem;
+        font-weight: 100;
+        opacity: 0;
+        animation: fadeIn 1s 1.5s;
+        animation-fill-mode: forwards;
+
+        span {
+            font-size: 1rem;
+            display: block;
+            padding-top: 1.25rem;
+            color: #ffd700;
+        }
+    }
+    .map-wrap {
+        position: absolute;
+        top: 550px;
+        bottom: 20px;
+        background: rgba(8, 253, 216, 0.1);
+        width: 90%;
+        height: 200px;
+    }
+}

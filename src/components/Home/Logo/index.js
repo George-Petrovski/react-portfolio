@@ -1,5 +1,5 @@
 import './index.scss';
-import LogoS from '../../../assets/images/logo-s.png'
+import LogoS from '../../../assets/images/logo-g.png'
 import { useRef } from 'react'
 // import gsap from 'gsap-trial'
 // import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
