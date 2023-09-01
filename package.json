@@ -13,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
+    "dotenv": "^16.3.1",
     "fortawesome": "^0.0.1-security",
     "gsap-trial": "^3.12.2",
     "loaders.css": "^0.1.2",
@@ -48,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.3"
   }
 }
