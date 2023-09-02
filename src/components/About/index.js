@@ -30,17 +30,20 @@ const About = () => {
                         />
                     </h1>
                     <p>
-                        I'm a very ambition font-end developer looking for a role in 
-                        an established IT company with the opportunity to work with the latest 
-                        technologies on challenging and diverse projects.
+                        I am a very ambitious software engineer who is looking for a role in a 
+                        transformational organization that is using technology to solve challenges.
                     </p>
                     <p>
-                        I'm confident, curious, and perpetually working on improving my skillset
-                        by tackling one problem at a time.
+                        Having multiple degrees from University of Waterloo and Seneca, I am confident 
+                        in my knowledge to deliver lasting results. I have had a few years of experience 
+                        as a Teaching Assistant and have honed my knowledge transfer skills so that 
+                        collaboration becomes simple and effortless. Finally, I am an expert communicator 
+                        from my experience working in sales and understand that it is imperative to 
+                        listen attentively so that results can be delivered as expected.
                     </p>
                     <p>
-                        If i need to define myself in one sentence that would be a family person, 
-                        a tech enthusiast, amateur photographer, and life long learner.
+                        If I need to define myself in one sentence that would be a family person, 
+                        a tech enthusiast, nature lover, adventurer, and a life long learner.
                     </p>
                 </div>
 

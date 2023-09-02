@@ -40,7 +40,7 @@ const Home = () => {
                 idx={15} />
                 <br />
                 <AnimatedLetters letterClass={letterClass}
-                strArray={Array.from("a Web Developer.")}
+                strArray={Array.from("Software Engineer.")}
                 idx={15} />
                 </h1>
                 <h2>FullStack Developer / DevOps / ML Ops</h2>
