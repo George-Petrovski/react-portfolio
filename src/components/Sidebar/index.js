@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './index.scss'
 import LogoG from '../../assets/images/logo-g.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
@@ -10,6 +10,20 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
     const [showNav, setShowNav] = useState(false);
+    const navRef = useRef(null);
+
+    const toggleNav = () => {
+        if (!showNav) {
+            // Open the menu
+            const nav = navRef.current;
+            nav.style.animation = 'slideDown 0.7s forwards';
+        } else {
+            // Close the menu
+            const nav = navRef.current;
+            nav.style.animation = 'slideUp 0.7s forwards';
+        }
+        setShowNav(!showNav);
+    };
 
     return(
         <div className='nav-bar'>
@@ -17,8 +31,8 @@ const Sidebar = () => {
                 <img src={LogoG} alt = "logo" />
                 <img className="sub-logo" src={LogoSubtitle} alt = "George" />
             </Link>
-            <nav className={showNav ? 'mobile-show' : ''}>
-                <NavLink exact="true" activeclassname="active" to="/" onClick={() => setShowNav(false)}>
+            <nav className={showNav ? 'mobile-show' : 'mobile-hide'} ref={navRef}>
+                <NavLink exact="true" activeclassname="active" to="/" onClick={toggleNav}>
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
                 </NavLink>
                 <NavLink
@@ -26,15 +40,15 @@ const Sidebar = () => {
                     activeclassname="active"
                     className="about-link"
                     to="/about"
-                    onClick={() => setShowNav(false)}>
+                    onClick={toggleNav}>
                     <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
                 </NavLink>
                 <NavLink 
                     exact="true"
                     activeclassname="active"
                     className="folder-link"
-                    to="/folder"
-                    onClick={() => setShowNav(false)}>
+                    to="/projects"
+                    onClick={toggleNav}>
                     <FontAwesomeIcon icon={faFolder} color="#4d4d4e" />
                 </NavLink>
                 <NavLink 
@@ -42,15 +56,9 @@ const Sidebar = () => {
                     activeclassname="active"
                     className="contact-link"
                     to="/contact"
-                    onClick={() => setShowNav(false)}>
+                    onClick={toggleNav}>
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </NavLink>
-                <FontAwesomeIcon 
-                    onClick={() => setShowNav(false)}
-                    icon={faClose}
-                    color="#ffd700"
-                    size="3x"
-                    className='close-icon' />
             </nav>
             <ul>
                 <li>
@@ -73,11 +81,11 @@ const Sidebar = () => {
                 </li>
             </ul>
             <FontAwesomeIcon 
-            onClick={() => setShowNav(true)}
-            icon={faBars}
+            onClick={toggleNav}
+            icon={showNav? faClose : faBars}
             color="#ffd700"
             size="3x"
-            className='hamburger-icon' />
+            className='menu-open-close-icon' />
         </div>
     )
 };
