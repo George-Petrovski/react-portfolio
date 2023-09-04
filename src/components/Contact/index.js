@@ -50,9 +50,9 @@ const Contact = () => {
                         />
                     </h1>
                     <p>
-                        I'm interested in various opportunities - especially ambitious or 
+                        I am interested in various opportunities - especially ambitious or 
                         large projects. However, if you have other requests or questions, 
-                        don't hesitate to contact me using below form either.
+                        do not hesitate to contact me using the form below.
                     </p>
                     <div className='contact-form'>
                         <form ref={form} onSubmit={sendEmail}>
