@@ -135,25 +135,10 @@
           position: relative;
           transform: none;
           width: 80%;
+          height: 85vmax;
           padding: 0;
           display: block;
           box-sizing: border-box;
-        }
-      }
-  
-      &.portfolio-page {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-  
-        h1.page-title {
-          margin-left: 20px;
-          margin-top: 20px;
-        }
-  
-        .image-box {
-          height: 200px;
-          max-width: calc(50% - 10px);
         }
       }
     }
