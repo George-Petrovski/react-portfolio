@@ -23,7 +23,7 @@ const Project = () => {
                     <h1>
                         <AnimatedLetters
                             letterClass={letterClass}
-                            strArray={Array.from("Technical Projects")}
+                            strArray={Array.from("Projects")}
                             idx={5}
                         />
                     </h1>
