@@ -79,10 +79,9 @@
         position: relative;
         width: 100%;
         height: 300px;
-        overflow: visible;
-        margin: 0;
+        padding-top: 10vh;
+        display: block;
     }
-    
 
     .cubespinner {
         animation-name: spincube;

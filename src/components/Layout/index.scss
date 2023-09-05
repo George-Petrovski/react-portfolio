@@ -4,25 +4,6 @@
     position: absolute;
 }
 
-.top-tags {
-    bottom: auto;
-    top: 35px;
-}
-
-.tags {
-    color: #ffd700;
-    opacity: 0.6;
-    position: absolute;
-    bottom: 0;
-    left: 120px;
-    font-size: 18px;
-    font-family: 'La Belle Aurore';
-}
-
-.bottom-tag-html {
-    margin-left: -20px;
-}
-
 .container {
     width: 100%;
     will-change: contents;
@@ -129,27 +110,16 @@
       &.portfolio-page {
         display: inline-block;
         position: relative;
-        overflow: scroll;
 
         .text-zone {
           position: relative;
           transform: none;
           width: 80%;
-          height: 85vmax;
+          height: auto;
           padding: 0;
           display: block;
           box-sizing: border-box;
         }
       }
     }
-  
-    // .stage-cube-cont {
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 0%;
-    //   left: 0;
-    //   bottom: 0;
-    //   overflow: visible;
-    //   display: inline-block;
-    // }
   }

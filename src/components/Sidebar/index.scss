@@ -146,17 +146,13 @@
         top: 0;
         left: 0;
         background: #181818;
+        height: auto;
         margin: 0;
         z-index: 2;
         position: fixed;
+        animation: fadeIn 0.5s;
 
         &.mobile-show {
-            animation: slideDown 0.7s forwards;
-            display: block;
-        }
-    
-        &.mobile-hide {
-            animation: slideUp 0.7s forwards;
             display: block;
         }
   
@@ -187,27 +183,4 @@
           z-index: 3;
        }
     }
-
-    @keyframes slideDown {
-        from {
-          height: 0;
-          opacity: 0;
-        }
-        to {
-          height: auto;
-          opacity: 1;
-        }
-      }
-    
-      /* Define the animation for closing the menu */
-      @keyframes slideUp {
-        from {
-          height: auto;
-          opacity: 1;
-        }
-        to {
-          height: 0;
-          opacity: 0;
-        }
-      }
   }

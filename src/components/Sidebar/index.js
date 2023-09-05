@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import './index.scss'
 import LogoG from '../../assets/images/logo-g.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
@@ -10,18 +10,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
     const [showNav, setShowNav] = useState(false);
-    const navRef = useRef(null);
 
     const toggleNav = () => {
-        if (!showNav) {
-            // Open the menu
-            const nav = navRef.current;
-            nav.style.animation = 'slideDown 0.7s forwards';
-        } else {
-            // Close the menu
-            const nav = navRef.current;
-            nav.style.animation = 'slideUp 0.7s forwards';
-        }
         setShowNav(!showNav);
     };
 
@@ -31,7 +21,7 @@ const Sidebar = () => {
                 <img src={LogoG} alt = "logo" />
                 <img className="sub-logo" src={LogoSubtitle} alt = "George" />
             </Link>
-            <nav className={showNav ? 'mobile-show' : 'mobile-hide'} ref={navRef}>
+            <nav className={showNav ? 'mobile-show' : ''}>
                 <NavLink exact="true" activeclassname="active" to="/" onClick={toggleNav}>
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
                 </NavLink>
