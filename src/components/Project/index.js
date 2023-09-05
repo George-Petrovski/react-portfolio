@@ -43,14 +43,14 @@ const Project = () => {
                     <p>
                         <a href='https://github.com/George-Petrovski/image-repository' target='_blank' rel="noreferrer">(FullStack) Image Hosting Web App</a>
                         <br />
-                        The frontend is a React App that can upload and display photos via API requests to a backend. The backend runs on express and implements a RESTfull API 
+                        The frontend is a React App that can upload and display photos via API requests to a backend. The backend runs on express and implements a RESTful API 
                         that communicates with the Cloudinary plugin to store and retrieve images. 
                     </p>
                     <br />
                     <p>
                         <a href='https://github.com/George-Petrovski/comic-book' target='_blank' rel="noreferrer">(Express) Comic Book Web App</a>
                         <br />
-                        An express application that uses handlebars to display the data on the page. Implemented RESTfull APIs to store the amount of times a particular page 
+                        An express application that uses handlebars to display the data on the page. Implemented RESTful APIs to store the amount of times a particular page 
                         was viewed in a mongoDB via mongoose. 
                     </p>
                     <br />
