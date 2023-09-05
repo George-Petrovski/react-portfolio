@@ -73,7 +73,7 @@
     position: absolute;
     background-color: #000;
     top: 50px;
-    right: 30%;
+    right: 0%;
     z-index: 999999;
     width: 267px;
     padding: 20px;
@@ -97,7 +97,7 @@
     background: rgba(8, 253, 216, 0.1);
     float: right;
     width: 53%;
-    height: 115%;
+    height: 95%;
 }
 
 .leaflet-container {
@@ -136,10 +136,11 @@
     }
     .map-wrap {
         position: absolute;
+        left: 10%;
         top: 550px;
         bottom: 20px;
         background: rgba(8, 253, 216, 0.1);
-        width: 90%;
+        width: 80%;
         height: 200px;
     }
 }
